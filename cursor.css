@@ -1,0 +1,32 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  border: 1px solid #ffffff;
+}
+
+.particle {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: #ffffff;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+}
+
+body,
+a,
+button,
+input,
+textarea {
+  cursor: none !important;
+}
