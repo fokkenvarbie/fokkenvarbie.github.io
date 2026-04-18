@@ -24,8 +24,8 @@ h1 {
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: #bdbdbd;
 }
 
@@ -75,7 +75,7 @@ a:active {
 
 .download-link {
   margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 #lang-toggle {
@@ -86,7 +86,7 @@ a:active {
   border: 1px solid #e0e0e0;
   color: #e0e0e0;
   font-family: 'VT323', monospace;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 4px 10px;
   cursor: pointer;
 }
