@@ -1,37 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let currentLang = 'en'; 
-
+  let currentLang = 'en';
   const toggleButton = document.getElementById('lang-toggle');
-  if (!toggleButton) return;
-
-  const pdfViewer = document.getElementById('pdf-viewer');
-  const pdfDownload = document.getElementById('pdf-download');
+  const linkEn = document.getElementById('link-en');
+  const linkPt = document.getElementById('link-pt');
 
   function updateLanguage() {
     const elements = document.querySelectorAll('[data-en]');
     elements.forEach(el => {
-      el.innerHTML = el.dataset[currentLang]; 
+      el.innerHTML = el.getAttribute(`data-${currentLang}`);
     });
 
     toggleButton.textContent = currentLang === 'en' ? 'PT-BR' : 'EN';
 
-    if (pdfViewer) {
-      pdfViewer.src = currentLang === 'en' 
-        ? 'assets/Barbara_Guimaraes_EN.pdf' 
-        : 'assets/Barbara_Guimaraes_PT.pdf';
-    }
-
-    if (pdfDownload) {
-      pdfDownload.href = currentLang === 'en' 
-        ? 'assets/Barbara_Guimaraes_EN.pdf' 
-        : 'assets/Barbara_Guimaraes_PT.pdf';
+    if (currentLang === 'en') {
+      linkEn.style.display = 'inline';
+      linkPt.style.display = 'none';
+    } else {
+      linkEn.style.display = 'none';
+      linkPt.style.display = 'inline';
     }
   }
-
-  updateLanguage();
 
   toggleButton.addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'pt' : 'en';
     updateLanguage();
   });
+
+  updateLanguage();
 });
